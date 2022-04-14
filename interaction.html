@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="images/siteicon.ico.png">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <title>CSS Interaction</title>
+</head>
+
+<body class="animationPresent">
+
+    <header>
+        <nav class=" container">
+        <div class="logo">
+        <div><img class="normalLogo"src="images/logonew.png" alt="Website Logo">
+          <img class="mobileLogo" src="images/logonewmobile.png">
+        </div>
+        </div>
+          <ul class="nav-links">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="about.html">About</a>
+            </li>
+            <li>
+              <a href="work.html">Work</a>
+           </li>
+           <li>
+            <a href="projects.html">Projects</a>
+          </li>
+          </ul>
+        <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+        </div>
+        </nav>
+        </header>
+
+
+<section class="animationHeader">
+	  <h1 class="jpHeader container">永井博さんのオーディオポストカード <br> Hiroshi Nagai's Audio Post Cards</h1>
+</section>
+
+<section class="introduction container clearfix">
+  <strong>あなたが聞くために楽しいはがき。<br>画像の上にマウスを置くと、サウンドが見つかります。</strong>
+  <hr>
+  <strong>A fun postcard for you to listen. <br> Hover over the images to find the sounds.</strong>
+</section>
+
+<section class="bluePost">
+  
+<div class="container clearfix splitContent">
+<div class="imageSide pool">
+  <script>
+    $(function(){
+    $('#musicHolder').hover(
+      function() {    $("audio")[0].play();},
+       function() {    $("audio")[0].pause();}
+    )
+    });
+
+    $(function(){
+    $('#SFX').hover(
+      function() {    $("audio")[1].play();},
+      function() {    $("audio")[1].pause();}
+    )
+    });
+  </script> 
+<div id="musicHolder">
+    <p>&nbsp;</p>
+  <audio preload="auto">
+    <source src="media/LoveTalkingEdit.mp3" type="audio/mpeg">
+    Your browser does not support this audio format.
+  </audio>
+</div>
+
+<div id="SFX">
+  <p>&nbsp;</p>
+<audio preload="auto">
+  <source src="media/poolSFX.mp3" type="audio/mpeg">
+  Your browser does not support this audio format.
+</audio>
+</div>
+  <span> &nbsp;</span>
+</div>
+<div class="textSide"><p class="jTextRight">プールサイドに行きます<br>。</p>
+    <p class="eTextRight">Going Poolside</p></div>
+</div>
+
+<div class="textBlockMobile container"><p class="jText">プールサイドに行きます。</p>
+  <p class="subBlockMobile">Going Poolside</p></div>
+</div>
+
+</section>
+
+<section class="pinkPost">
+
+<div class="container clearfix splitContent">
+<div class="textSide secondCard"><p class="jTextLeft">リスニングの時間<br>。</p>
+        <p class="eTextLeft">Listening Time</p>
+</div>
+<div class="imageSide record">
+  <!-------Thanks to Luce Digitale Blog for helping figure out this script-->
+  <script>
+    $(function(){
+     $('#musicHolder1').hover(
+      function() {    $("audio")[2].play();},
+       function() {    $("audio")[2].pause();}
+      )
+      });
+    </script>
+
+<div id="musicHolder1">
+  <p>&nbsp;</p>
+  <audio preload="auto">
+  <source src="media/RideOnTimeEdit.mp3" type="audio/mpeg">
+    You browser does not support this audio format.
+  </audio>
+</div>
+</div>
+</div>
+<div class="textBlockMobile container"><p class="jText">リスニングの時間。</p>
+<p class="subBlockMobile">Listening Time</p></div>
+</div>
+
+</section>
+
+<section class="greenPost">
+  
+    <div class="container clearfix splitContent">
+    <div class="imageSide coast">
+      <script>
+        $(function(){
+        $('#musicHolder2').hover(
+           function() {    $("audio")[3].play();},
+           function() {    $("audio")[3].pause();}
+        )
+        });
+
+          $(function(){
+          $('#SFX1').hover(
+          function() {    $("audio")[4].play();},
+          function() {    $("audio")[4].pause();}
+    )
+    });
+      </script> 
+    <div id="musicHolder2">
+        <p>&nbsp;</p>
+      <audio preload="auto">
+        <source src="media/CircusTownEdit.mp3" type="audio/mpeg">
+        Your browser does not support this audio format.
+      </audio>
+    </div>
+    
+    <div id="SFX1">
+      <audio preload="auto">
+        <source src="media/beachSFX.mp3" type="audio/mpeg">
+        Your browser does not support this audio format.
+      </audio>
+    </div>
+
+      <span> &nbsp;</span>
+    </div>
+    <div class="textSide"><p class="jTextRight">長い旅行と海岸<br>。</p></p>
+        <p class="eTextRight">Long Trips And Coasts</div>
+    </div>
+    
+    <div class="textBlockMobile container"><p class="jText">長い旅行と海岸</p>
+      <p class="subBlockMobile">Long Trips And Coasts</p></div>
+    </div>
+    
+    </section>
+
+</body>
+<script src="js/responsive.js"></script>
+</html>
